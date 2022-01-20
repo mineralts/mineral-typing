@@ -4,15 +4,15 @@ import VoiceChannel from '../channels/VoiceChannel'
 import Guild from '../guild/Guild'
 
 export default interface VoiceState {
-  member: GuildMember
-  sessionId: string
-  suppress: boolean
-  video: boolean
-  mute: boolean
-  deaf: boolean
-  channelId: Snowflake
-  channel: VoiceChannel | undefined
-  guild: Guild
+  readonly member: GuildMember
+  readonly sessionId: string
+  readonly suppress: boolean
+  readonly video: boolean
+  readonly mute: boolean
+  readonly deaf: boolean
+  readonly channelId: Snowflake
+  readonly channel: VoiceChannel | undefined
+  readonly guild: Guild
 
   isSuppress (): boolean
   hasVideo (): boolean

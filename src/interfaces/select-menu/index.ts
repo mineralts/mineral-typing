@@ -1,13 +1,13 @@
-import { ComponentType, MenuSelect, MenuSelectOption } from '../../types'
+import { ComponentType, MenuSelectOption } from '../../types'
 
 export default interface SelectMenu {
-  type: ComponentType
-  customId: string | undefined
-  minValues: number
-  maxValues: number
-  placeholder?: string
-  disabled: boolean
-  choices: MenuSelectOption[]
+  readonly type: ComponentType
+  readonly customId: string | undefined
+  readonly minValues: number
+  readonly maxValues: number
+  readonly placeholder?: string
+  readonly disabled: boolean
+  readonly choices: MenuSelectOption[]
 
   setCustomId (identifier: string): this
   setMinimalValue (value: number): this

@@ -1,10 +1,10 @@
 import User from '../user'
 
 export default interface IntegrationApplication {
-  id: string
-  name: string
-  description: string
-  icon: string | undefined
-  summary: string
-  bot: User
+  readonly id: string
+  readonly name: string
+  readonly description: string
+  readonly icon: string | undefined
+  readonly summary: string
+  readonly bot: User
 }

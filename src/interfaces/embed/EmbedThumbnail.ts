@@ -1,4 +1,4 @@
 export default interface EmbedThumbnail {
-  url: string | null | undefined
-  proxy_url: string | null | undefined
+  readonly url: string | null | undefined
+  readonly proxy_url: string | null | undefined
 }

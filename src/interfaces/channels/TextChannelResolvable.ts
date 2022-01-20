@@ -5,21 +5,17 @@ import Message from '../message'
 import MessageManager from '../message/MessageManager'
 
 export default interface TextChannelResolvable extends Channel {
-  description: string | undefined
-  lastMessageId: Snowflake
-  lastMessage: Message | undefined
-  permissionOverwrites: { [K: string]: string }[]
-  cooldown: DateTime
-  messages: MessageManager
-  isNsfw: boolean
+  readonly description: string | undefined
+  readonly lastMessageId: Snowflake
+  readonly lastMessage: Message | undefined
+  readonly permissionOverwrites: { [K: string]: string }[]
+  readonly cooldown: DateTime
+  readonly messages: MessageManager
+  readonly isNsfw: boolean
 
   setCooldown (value: Milliseconds): Promise<void>
-
   setDescription (value: string | null): Promise<void>
-
   isNSFW (): boolean
-
   setNSFW (bool: boolean): boolean
-
   send (messageOption: MessageOption): Promise<void>
 }

@@ -1,5 +1,5 @@
 export default interface EmbedAuthor {
-  name: string | undefined
-  url: string | undefined | null
-  icon_url: string | undefined | null
+  readonly name: string | undefined
+  readonly url: string | undefined | null
+  readonly icon_url: string | undefined | null
 }

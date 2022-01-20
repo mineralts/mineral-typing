@@ -10,23 +10,23 @@ import MessageEmbed from '../embed/MessageEmbed'
 import MentionResolvable from '../mention/MentionResolvable'
 
 export default interface Message {
-  reactions: ReactionManager
-  id: Snowflake
-  type: number
-  flags: string[]
-  tts: boolean
-  createdAt: DateTime | null
-  updatedAt: DateTime | null
-  referencedMessage: Message | null | undefined
-  pinned: boolean
-  mentions: MentionResolvable
-  author: GuildMember | undefined
-  guild: Guild | undefined
-  channel: TextChannel
-  content: string
-  attachment: MessageAttachment
-  components: any[]
-  embeds: MessageEmbed[]
+  readonly reactions: ReactionManager
+  readonly id: Snowflake
+  readonly type: number
+  readonly flags: string[]
+  readonly tts: boolean
+  readonly createdAt: DateTime | null
+  readonly updatedAt: DateTime | null
+  readonly referencedMessage: Message | null | undefined
+  readonly pinned: boolean
+  readonly mentions: MentionResolvable
+  readonly author: GuildMember | undefined
+  readonly guild: Guild | undefined
+  readonly channel: TextChannel
+  readonly content: string
+  readonly attachment: MessageAttachment
+  readonly components: any[]
+  readonly embeds: MessageEmbed[]
 
   isTTS (): boolean
   isPinned (): boolean

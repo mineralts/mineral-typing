@@ -1,8 +1,8 @@
 import { ComponentType, MessageComponentResolvable } from '../../types'
 
 export default interface EmbedRow {
-  type: ComponentType
-  components: MessageComponentResolvable[]
+  readonly type: ComponentType
+  readonly components: MessageComponentResolvable[]
 
   addComponent (component: MessageComponentResolvable): this
   addComponents (components: MessageComponentResolvable[]): this

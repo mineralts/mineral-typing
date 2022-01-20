@@ -1,23 +1,18 @@
-import {
-  ComponentType,
-  InteractionType,
-  MessageOption,
-  Snowflake
-} from '../../types'
+import { ComponentType, InteractionType, MessageOption, Snowflake } from '../../types'
 import Message from '../message'
 import GuildMember from '../guild/GuildMember'
 import CommandOptions from './CommandOptions'
 
 export default interface CommandInteraction {
-  commandOptions: CommandOptions
-  id: Snowflake
-  version: number
-  type: keyof typeof InteractionType
-  token: string
-  customId: string | undefined
-  componentType: keyof typeof ComponentType | undefined
-  message: Message | undefined
-  member: GuildMember
+  readonly commandOptions: CommandOptions
+  readonly id: Snowflake
+  readonly version: number
+  readonly type: keyof typeof InteractionType
+  readonly token: string
+  readonly customId: string | undefined
+  readonly componentType: keyof typeof ComponentType | undefined
+  readonly message: Message | undefined
+  readonly member: GuildMember
 
   reply (messageOption: MessageOption): Promise<void>
 }

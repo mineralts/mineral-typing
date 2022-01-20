@@ -5,9 +5,10 @@ import GuildMember from '../guild/GuildMember'
 import Channel from '../channels/Channel'
 
 export default interface MentionResolvable {
-  everyone: boolean
-  roles: Collection<Snowflake, Role>
-  members: Collection<Snowflake, GuildMember>
-  channels: Collection<Snowflake, Channel>
+  readonly everyone: boolean
+  readonly roles: Collection<Snowflake, Role>
+  readonly members: Collection<Snowflake, GuildMember>
+  readonly channels: Collection<Snowflake, Channel>
+
   isEveryone (): boolean
 }

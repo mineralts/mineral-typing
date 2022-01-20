@@ -8,15 +8,15 @@ import { Assembler } from '@mineralts/assembler'
 import { Command } from '@mineralts/forge'
 
 export default interface Client {
-  guilds: GuildManager
-  container: { events: Collection<string, Map<string, MineralEvent>>, commands: Collection<string, any>, subcommands: Collection<string, any>}
-  token: string
-  options: ClientOptions
-  user: User
-  sessionId: string
-  presences: Presence[]
-  application: { id: string, flags: number }
-  commands: Collection<Snowflake, Command>
+  readonly guilds: GuildManager
+  readonly container: { events: Collection<string, Map<string, MineralEvent>>, commands: Collection<string, any>, subcommands: Collection<string, any>}
+  readonly token: string
+  readonly options: ClientOptions
+  readonly user: User
+  readonly sessionId: string
+  readonly presences: Presence[]
+  readonly application: { id: string, flags: number }
+  readonly commands: Collection<Snowflake, Command>
 
   registerGlobalCommands (assembler: Assembler): Promise<void>
 }

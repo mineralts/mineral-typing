@@ -1,9 +1,9 @@
 import Emoji from '../emoji'
 
 export default interface BaseButton {
-  label?: string
-  emoji?: string | Emoji
-  disabled: boolean
+  readonly label?: string
+  readonly emoji?: string | Emoji
+  readonly disabled: boolean
 
   setLabel (value: string): this
   setEmoji (emoji: string | Emoji): this

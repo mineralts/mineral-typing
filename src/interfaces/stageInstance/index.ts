@@ -1,12 +1,12 @@
 import { Snowflake } from '../../types'
 
 export default interface StageInstance {
-  id: Snowflake
-  guildId: Snowflake
-  channelId: Snowflake
-  topic: string
-  privacyLevel: number
-  discoverableDisabled: boolean
+  readonly id: Snowflake
+  readonly guildId: Snowflake
+  readonly channelId: Snowflake
+  readonly topic: string
+  readonly privacyLevel: number
+  readonly discoverableDisabled: boolean
 
   isDiscoverableDisabled (): boolean
 }

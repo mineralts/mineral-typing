@@ -3,6 +3,6 @@ import GuildMember from '../guild/GuildMember'
 import Client from '../client'
 
 export default interface Reaction {
-  emoji: Emoji
-  member: GuildMember | Client
+  readonly emoji: Emoji
+  readonly member: GuildMember | Client
 }

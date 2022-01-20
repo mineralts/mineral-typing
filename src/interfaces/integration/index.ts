@@ -5,21 +5,21 @@ import IntegrationAccount from './IntegrationAccount'
 import IntegrationApplication from './IntegrationApplication'
 
 export default interface Integration {
-  id: Snowflake
-  name: string
-  type: 'twitch' | 'youtube' | 'discord'
-  enabled: boolean
-  syncing: boolean
-  roleId: Snowflake
-  enableEmoticons: boolean
-  expireBehavior: BehaviorsExpiration
-  expireGracePeriod: number
-  user: User
-  account: IntegrationAccount
-  syncedAt: DateTime
-  subscriberCount: number
-  revoked: boolean
-  application: IntegrationApplication
+  readonly id: Snowflake
+  readonly name: string
+  readonly type: 'twitch' | 'youtube' | 'discord'
+  readonly enabled: boolean
+  readonly syncing: boolean
+  readonly roleId: Snowflake
+  readonly enableEmoticons: boolean
+  readonly expireBehavior: BehaviorsExpiration
+  readonly expireGracePeriod: number
+  readonly user: User
+  readonly account: IntegrationAccount
+  readonly syncedAt: DateTime
+  readonly subscriberCount: number
+  readonly revoked: boolean
+  readonly application: IntegrationApplication
 
   isEnabled (): boolean
   isSyncing (): boolean

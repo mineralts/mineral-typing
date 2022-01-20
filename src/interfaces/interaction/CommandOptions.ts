@@ -12,7 +12,7 @@ import { ChannelResolvable } from '../../types'
 import GuildMember from '../guild/GuildMember'
 
 export default interface CommandOptions {
-  member: GuildMember
+  readonly member: GuildMember
 
   getChannel (name: string): ChannelResolvable | undefined
   getMember (name: string): GuildMember | undefined

@@ -8,17 +8,17 @@ import EmbedFooter from './EmbedFooter'
 import Color from '../colors'
 
 export default interface MessageEmbed {
-  title: string | undefined
-  description: string | undefined
-  color: keyof typeof Color
-  fields: EmbedField[]
-  author: EmbedAuthor | undefined
-  image: EmbedImage | undefined
-  thumbnail: EmbedThumbnail | undefined
-  timestamp: DateTime | undefined
-  video: EmbedVideo | undefined
-  url: string | undefined
-  footer: EmbedFooter | undefined
+  readonly title: string | undefined
+  readonly description: string | undefined
+  readonly color: keyof typeof Color
+  readonly fields: EmbedField[]
+  readonly author: EmbedAuthor | undefined
+  readonly image: EmbedImage | undefined
+  readonly thumbnail: EmbedThumbnail | undefined
+  readonly timestamp: DateTime | undefined
+  readonly video: EmbedVideo | undefined
+  readonly url: string | undefined
+  readonly footer: EmbedFooter | undefined
 
   setTitle (value: string): this
   setDescription (value: string): this

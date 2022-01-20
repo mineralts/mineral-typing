@@ -2,12 +2,12 @@ import { RTC_Region, VideoQuality } from '../../types'
 import Channel from './Channel'
 
 export default interface VoiceChannel extends Channel {
-  maxUser: number
-  region: keyof typeof RTC_Region
-  rateLimitPerUser: number
-  permission: any[]
-  bitrate: number
-  videoQuality: keyof typeof VideoQuality
+  readonly maxUser: number
+  readonly region: keyof typeof RTC_Region
+  readonly rateLimitPerUser: number
+  readonly permission: any[]
+  readonly bitrate: number
+  readonly videoQuality: keyof typeof VideoQuality
 
   setBitrate (value: number): Promise<void>
   setRtcRegion (region: keyof typeof RTC_Region): Promise<void>

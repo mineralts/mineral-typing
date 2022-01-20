@@ -20,53 +20,53 @@ import GuildHashes from './GuildHashes'
 import { Command } from '../../../../forge'
 
 export default interface Guild {
-  commands: Collection<Snowflake, Command>
-  id: Snowflake
-  name: string
-  icon: string | null
-  banner: string | null
-  splash: string | null
-  discoverySplash: string | null
-  description: string | undefined
-  premiumTier: number
-  premiumSubscriptionCount: number
-  systemChannelFlags: number
-  explicitContentFilter: number
-  region: keyof typeof Region
-  isLazy: boolean
-  applicationId: string | null
-  nsfw: boolean
-  memberCount: number
-  roles: GuildRoleManager
-  stageInstances: []
-  guildHashes: GuildHashes
-  afkChannelId: Snowflake
-  publicUpdateChannelId: Snowflake
-  channels: GuildChannelManager
-  verificationLevel: number
-  hasPremiumProgressBarEnabled: boolean
-  features: GuildFeature[]
-  stickers: GuildStickerManager
-  members: GuildMemberManager
-  bots: GuildMemberManager
-  ruleChannelId: Snowflake
-  guildScheduledEvents: any[]
-  defaultMessageNotifications: keyof typeof NotificationLevel
-  mfaLevel: number
-  threads: GuildThreadManager
-  maxMemberSize: number
-  emojis: GuildEmojiManager
-  defaultLang: string
-  ownerId: Snowflake
-  owner: GuildMember | undefined
-  maxVideoChannelUsers: number
-  registeredCommandCount: number
-  applicationCommandCount: number
-  afkTimeout: number
-  systemChannelId: Snowflake
-  vanityUrlCode: string | null
-  embeddedActivities: any[]
-  invites: InviteManager
+  readonly commands: Collection<Snowflake, Command>
+  readonly id: Snowflake
+  readonly name: string
+  readonly icon: string | null
+  readonly banner: string | null
+  readonly splash: string | null
+  readonly discoverySplash: string | null
+  readonly description: string | undefined
+  readonly premiumTier: number
+  readonly premiumSubscriptionCount: number
+  readonly systemChannelFlags: number
+  readonly explicitContentFilter: number
+  readonly region: keyof typeof Region
+  readonly isLazy: boolean
+  readonly applicationId: string | null
+  readonly nsfw: boolean
+  readonly memberCount: number
+  readonly roles: GuildRoleManager
+  readonly stageInstances: []
+  readonly guildHashes: GuildHashes
+  readonly afkChannelId: Snowflake
+  readonly publicUpdateChannelId: Snowflake
+  readonly channels: GuildChannelManager
+  readonly verificationLevel: number
+  readonly hasPremiumProgressBarEnabled: boolean
+  readonly features: GuildFeature[]
+  readonly stickers: GuildStickerManager
+  readonly members: GuildMemberManager
+  readonly bots: GuildMemberManager
+  readonly ruleChannelId: Snowflake
+  readonly guildScheduledEvents: any[]
+  readonly defaultMessageNotifications: keyof typeof NotificationLevel
+  readonly mfaLevel: number
+  readonly threads: GuildThreadManager
+  readonly maxMemberSize: number
+  readonly emojis: GuildEmojiManager
+  readonly defaultLang: string
+  readonly ownerId: Snowflake
+  readonly owner: GuildMember | undefined
+  readonly maxVideoChannelUsers: number
+  readonly registeredCommandCount: number
+  readonly applicationCommandCount: number
+  readonly afkTimeout: number
+  readonly systemChannelId: Snowflake
+  readonly vanityUrlCode: string | null
+  readonly embeddedActivities: any[]
+  readonly invites: InviteManager
 
   setName (value: string): Promise<void>
   setPreferredLocale (region: keyof typeof Region): Promise<void>

@@ -7,16 +7,16 @@ import Role from '../roles'
 import VoiceState from '../voice/VoiceState'
 
 export default interface GuildMember {
-  id: Snowflake
-  username: string
-  user: User
-  guild: Guild
-  roles: GuildMemberRoleManager
-  highestRole: Role | null
-  pending: boolean
-  voice: VoiceState
-  communicationTimeout: DateTime | null
-  joinedAt: DateTime
+  readonly id: Snowflake
+  readonly username: string
+  readonly user: User
+  readonly guild: Guild
+  readonly roles: GuildMemberRoleManager
+  readonly highestRole: Role | null
+  readonly pending: boolean
+  readonly voice: VoiceState
+  readonly communicationTimeout: DateTime | null
+  readonly joinedAt: DateTime
 
   isPending (): boolean
   setUsername (value: string): Promise<void>

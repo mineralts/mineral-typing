@@ -1,5 +1,5 @@
 export default interface EmbedFooter {
-  text: string
-  icon_url: string | null | undefined
-  proxy_icon_url: string | null | undefined
+  readonly text: string
+  readonly icon_url: string | null | undefined
+  readonly proxy_icon_url: string | null | undefined
 }

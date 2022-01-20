@@ -1,6 +1,6 @@
 export default interface EmbedVideo {
-  url: string | null | undefined
-  proxy_url: string | null | undefined
-  height?: number
-  width?: number
+  readonly url: string | null | undefined
+  readonly proxy_url: string | null | undefined
+  readonly height?: number
+  readonly width?: number
 }

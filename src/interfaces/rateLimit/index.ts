@@ -1,9 +1,9 @@
 import { DateTime } from 'luxon'
 
 export default interface RateLimit {
-  message: string
-  retryAfter: DateTime
-  global: boolean
+  readonly message: string
+  readonly retryAfter: DateTime
+  readonly global: boolean
 
   isGlobal (): boolean
 }

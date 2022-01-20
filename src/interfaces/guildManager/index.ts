@@ -3,5 +3,5 @@ import { Snowflake } from '../../types'
 import Guild from '../guild/Guild'
 
 export default interface Index {
-  cache: Collection<Snowflake, Guild>
+  readonly cache: Collection<Snowflake, Guild>
 }

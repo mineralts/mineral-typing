@@ -3,12 +3,12 @@ import { DateTime } from 'luxon'
 import { ChannelResolvable } from '../../types'
 
 export default interface Invite {
-  owner: GuildMember
-  channel: ChannelResolvable
-  code: string
-  count: number
-  max: number
-  temporary: boolean
-  expireAt: DateTime
-  createdAt: DateTime
+  readonly owner: GuildMember
+  readonly channel: ChannelResolvable
+  readonly code: string
+  readonly count: number
+  readonly max: number
+  readonly temporary: boolean
+  readonly expireAt: DateTime
+  readonly createdAt: DateTime
 }

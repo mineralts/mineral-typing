@@ -3,14 +3,14 @@ import Guild from '../guild/Guild'
 import CategoryChannel from './CategoryChannel'
 
 export default interface Channel {
-  id: Snowflake
-  type: keyof typeof ChannelTypeResolvable
-  name: string
-  guildId: Snowflake
-  guild: Guild | undefined
-  parentId: Snowflake | undefined
-  position: number
-  parent?: CategoryChannel
+  readonly id: Snowflake
+  readonly type: keyof typeof ChannelTypeResolvable
+  readonly name: string
+  readonly guildId: Snowflake
+  readonly guild: Guild | undefined
+  readonly parentId: Snowflake | undefined
+  readonly position: number
+  readonly parent?: CategoryChannel
 
   isText (): boolean
   isVoice (): boolean

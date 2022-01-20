@@ -1,9 +1,9 @@
 export default interface VoiceRegion {
-  id: string
-  name: string
-  optimal: boolean
-  custom: boolean
-  deprecated: boolean
+  readonly id: string
+  readonly name: string
+  readonly optimal: boolean
+  readonly custom: boolean
+  readonly deprecated: boolean
 
   isOptimal (): boolean
   isCustom (): boolean

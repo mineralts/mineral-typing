@@ -3,10 +3,10 @@ import GuildMember from '../guild/GuildMember'
 import { PresenceStatus } from '../../types'
 
 export default interface Presence {
-  member: GuildMember
-  status: keyof typeof PresenceStatus
-  web: string | null
-  desktop: string | null
-  mobile: string | null
-  activities: Activity[]
+  readonly member: GuildMember
+  readonly status: keyof typeof PresenceStatus
+  readonly web: string | null
+  readonly desktop: string | null
+  readonly mobile: string | null
+  readonly activities: Activity[]
 }
